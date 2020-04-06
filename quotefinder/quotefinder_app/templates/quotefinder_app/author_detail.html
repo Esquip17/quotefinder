@@ -1,0 +1,14 @@
+<!-- quotefinder_app/templates/quotefinder_app/author_detail.html -->
+<h2>{{ author.name }}<a href=""></a></h2>
+
+<img src="{{ author.photo_url }}" alt="" class="author-photo" />
+
+<h3>Quote <a href=""></a></h3>
+
+<ul>
+  {% for quote in author.quotes.all %}
+  <li>
+    <a href="">{{ quote.body }}-{{ author.name }}</a>
+  </li>
+  {% endfor %}
+</ul>

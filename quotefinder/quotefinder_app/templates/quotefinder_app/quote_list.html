@@ -1,0 +1,25 @@
+<!--quotefinder_app/templates/quotefinder_app/quote_list.html -->
+{% extends 'quotefinder_app/base.html' %} {% block content %}
+<html>
+  <head>
+    <title>quotefinder_app</title>
+  </head>
+  <body>
+    <h1>Quotefinder</h1>
+    <nav>
+      <a href="/quotes">Quote</a>
+      <a href="/">author</a>
+    </nav>
+    {% block content %} {% endblock %}
+  </body>
+</html>
+<h2>Quotes <a href="">(+)</a></h2>
+<ul>
+  {% for quote in quotes %}
+  <li>
+    <a href="{% url 'quote_detail' pk=quote.pk %}"
+      >{{ quote.body }}> {{ quote.body }}-{{ quote.author }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

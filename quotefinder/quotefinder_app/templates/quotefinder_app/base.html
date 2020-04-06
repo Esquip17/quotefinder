@@ -1,0 +1,16 @@
+<!-- quotefinder_app/templates/quotefinder_app/base.html -->
+
+<html>
+  <head>
+    <title>Quotefinder</title>
+    <link rel='stylesheet' href='{% static 'css/quotefinder.css' %}' />
+  </head>
+  <body>
+    <h1>Quotefinder</h1>
+    <nav>
+      <a href="/quotes">Quotes</a>
+      <a href="/authors">Author</a>
+    </nav>
+    {% block content %} {% endblock %}
+  </body>
+</html>
