@@ -9,6 +9,6 @@ urlpatterns = [
     path('quote/<int:pk>', views.quote_detail, name='quote_detail'),
     path('author', views.author_list, name='author_list'),
     path('quote', views.quote_list, name='quote_list'),
-
+    path('', views.author_list, name='home')
 
 ]

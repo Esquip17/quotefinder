@@ -21,3 +21,8 @@ def author_detail(request, pk):
 def quote_detail(request, pk):
     quote = Quote.objects.get(id=pk)
     return render(request, 'quotefinder_app/quote_detail.html', {'quote': quote})
+
+
+def home(request, pk):
+    home = Author.object.get(id=pk)
+    return render(request, 'quotefinder_app/author_list.html',)
